@@ -101,7 +101,7 @@ const uint32_t kMqttReconnectTime = 5000;  // Delay(ms) between reconnect tries.
 #define MQTT_CLIMATE_CMND "cmnd"  // Sub-topic for the climate command topics.
 #define MQTT_CLIMATE_STAT "stat"  // Sub-topic for the climate stat topics.
 // Enable sending/receiving climate via JSON. `true` cost ~5k of program space.
-#define MQTT_CLIMATE_JSON false
+#define MQTT_CLIMATE_JSON true
 // Use Home Assistant-style operation modes.
 // i.e. Change the climate mode to "off" when turning the power "off".
 // See: https://www.home-assistant.io/components/climate.mqtt/#modes
@@ -233,7 +233,7 @@ const uint16_t kJsonAcStateMaxSize = 1024;  // Bytes
 // See `isSerialGpioUsedByIr()`.
 // Note: Debug costs ~6k of program space.
 #ifndef DEBUG
-#define DEBUG false  // Change to 'true' for serial debug output.
+#define DEBUG true  // Change to 'true' for serial debug output.
 #endif  // DEBUG
 
 // ----------------- End of User Configuration Section -------------------------
